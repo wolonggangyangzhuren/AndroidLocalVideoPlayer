@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yanzhenjie.andserver.sample.Main2Activity">
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/download_process"
+        android:max="100"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginTop="20dp"
+        android:progressDrawable="@drawable/progressbar"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下载视频"
+            android:id="@+id/bt_download"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+</RelativeLayout>
