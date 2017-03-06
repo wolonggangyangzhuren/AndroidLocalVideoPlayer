@@ -11,7 +11,7 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
  */
 
 public class HttpRequestHelper {
-    private static String IDEA_URL = "http://47.93.114.18/";
+    private static String IDEA_URL = "http://47.93.114.18";
     private static ApiServers apiServes;
     private HttpRequestHelper(){
         Retrofit retrofit = new Retrofit.Builder()

@@ -111,7 +111,7 @@ public class DownLoadService extends Service {
                 Log.e("downLoadId",current+"：任务id");
                 String fileName = DownLoadActivity.resultList.get(current++);
                 System.out.println("视频路径："+fileName);
-                downloadUrl = "http://47.93.114.18/"+fileName;
+                downloadUrl = "http://47.93.114.18/hls/1-Excel-sjtj/"+fileName;
                 Log.e("下载链接",downloadUrl);
 //                downloadManager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                 request = new DownloadManager.Request(Uri.parse(downloadUrl));
@@ -127,6 +127,12 @@ public class DownLoadService extends Service {
                 //不显示通知栏
                 request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_HIDDEN);
                 //设置文件存放路径
+                File files = new File(Environment.getExternalStorageDirectory().getAbsolutePath()+"/DayDayUp/1/");
+                if(files.exists() && files.isDirectory()?true : files.mkdirs())
+                {
+
+                }
+
                 request.setDestinationInExternalPublicDir("DayDayUp/1/" , fileName ) ;
 //            pb_update.setMax(100);
                 id = downloadManager.enqueue(request);

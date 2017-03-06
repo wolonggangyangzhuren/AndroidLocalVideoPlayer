@@ -11,7 +11,7 @@ import retrofit2.http.GET;
 
 public interface ApiServers {
 
-    @GET("test.m3u8")
+    @GET("hls/1-Excel-sjtj/tv.m3u8")
     Call<String> getTsUrl();
 
     @GET("{url}")
